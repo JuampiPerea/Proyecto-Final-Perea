@@ -1,0 +1,23 @@
+// Variable Colores
+$colores:(
+    fondo: #faeee7,
+    fondo2:#fffffe ,
+    fondo3:#ffc6c7,
+    fondo4:#ffdde1,
+    texto: #33272a,
+    texto2: #594a4e,
+    hover: #ff8ba7,
+    hover2: #ffc6c7,
+    
+    
+);
+
+span{
+    color: map-get($colores,"hover");
+};
+
+//Variables texto
+$tipografia:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$tamaño: 20px;
+$ancho: 10px;
+   

@@ -1,0 +1,779 @@
+@use "_commons" as c;
+
+//Body
+body{
+     background: map-get(c.$colores,"fondo");
+    background: -webkit-linear-gradient(to bottom,#ffc6c7,map-get(c.$colores,"fondo")); 
+    background: linear-gradient(to right,map-get(c.$colores,"fondo"),#ffc6c7); ;
+    @if map-get(c.$colores,"fondo")==#faeee7{color: #33272a}
+    @else {color: white}
+}
+
+/*Encabezado*/
+header{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   @if map-get(c.$colores,"fondo")==#faeee7{color: #33272a}
+    @else {color: white}
+
+}
+
+header h1 a{
+    font-size: 40px;
+    font-weight: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: map-get(c.$colores,"hover");    
+}
+
+/* NavBar */
+nav ul {
+    font-size: 15px;
+    list-style: none;
+}
+
+nav ul ul {
+    position: absolute;
+    display: none;
+}
+
+nav ul ul li {                  /* Pops de redes */
+    display: block;
+    position: absolute;
+    background-color: map-get(c.$colores,"fondo" );
+
+
+}
+
+nav ul li {
+    font-weight: bold;
+    display: inline-block;
+
+}
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    
+}
+
+nav ul li:hover ul li a {
+    background-color: map-get(c.$colores,"fondo" );
+    display: block;
+    font-size: 27px;
+
+}
+
+nav ul li a {
+    color:map-get(c.$colores,"texto");
+    font-size: 25px;
+
+
+}
+
+nav ul li a:hover {
+    color:map-get(c.$colores,"hover");
+    transform: scale(1.3);
+    transition: 0.3s;
+
+}
+/* Fin NavBar */
+
+/* Section */
+section{
+    color:map-get(c.$colores,"texto");
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section table{
+    border-color: #ffc6c7; 
+}
+
+section table tr td{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: map-get(c.$colores,"texto");
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+section h2{
+   color:map-get(c.$colores,"texto")
+}
+
+section img {
+     width: 560px;
+   height: 315px;   
+}
+/* Fin de Section */
+
+/* Main */
+main{
+    
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px 5px 15px 15px; 
+    color:map-get(c.$colores,"texto2")
+}
+
+main img{
+    width: 560px;
+    height: 315px;
+}
+
+/* Buttons */
+button a{
+    color: #33272a;
+}
+
+button a:hover{
+    color:map-get(c.$colores,"hover")
+}
+
+.Boton{
+    color:map-get(c.$colores,"texto");
+    animation: Rebota 1s infinite;
+    
+}
+
+.Boton:hover{
+    color:map-get(c.$colores,"hover");
+}
+
+/* ID */
+//Nav
+#navegacion1{
+    background-color:map-get(c.$colores,"fondo");
+    list-style: none;
+}
+
+
+//galeria
+#Galeria{
+  display: inline-block;
+  background-color:map-get(c.$colores,"fondo2");
+}
+
+#Galeria div{
+    display: inline-block;
+}
+
+#Galeria div p{
+    font-size: 20px;
+    font-weight: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:map-get(c.$colores,"texto2"); 
+    font-weight: bold;
+  
+}
+
+#Galeria img{
+    width:560px ;
+    height:  315px;
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+}
+
+
+#Ventas div{
+    background-color:map-get(c.$colores,"fondo");
+    display:inline-block;
+    margin: 15px;
+}
+
+#Ventas div img{
+    width: 230px;
+    height: 170px;
+    padding: 30px;
+}
+
+#Ventas div p{
+    font-size: 20px;
+    font-weight: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:map-get(c.$colores,"texto"); 
+    font-weight: bold;
+    margin-left: 15px
+
+}
+#PROMOS{
+    border-style: solid;
+    border-radius: 7px;
+    border-color:map-get(c.$colores,"hover2");
+    background-color:map-get(c.$colores,"fondo");
+}
+
+
+#PROMOS div{
+    border-style: dashed;
+    border-color:#c3f0ca;
+    border-radius: 7px;
+    margin: 15px;
+  
+}
+
+#PROMOS div p{
+    font-size: 20px;
+    font-weight: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:map-get(c.$colores,"texto"); 
+    font-weight: bold;
+    margin-left: 15px
+}
+
+#PROMOS div img{
+    width: 230px;
+    height: 170px;
+    padding: 30px;
+    display: flex;
+}
+
+#trabajos1{
+    display: grid;
+}
+
+/* Class */
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion1{
+    justify-content: space-between;
+}
+
+.logo-crisalida{
+    height: 65px;
+      
+}
+/* Inicio Main1*/
+.Main1{
+    display: grid;
+    text-align: center;  
+   
+}
+.box-main{
+    display: grid;
+    grid-template-rows: 30px 2fr auto;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+        "h2"
+        "imagenmain"
+        "pmain";   
+}
+
+.h2{
+    grid-area: h2;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: map-get(c.$colores,"texto");
+    font-style:italic;
+
+}
+.pmain{  
+    grid-area: pmain;
+    background-color:map-get(c.$colores,"fondo"); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    border-radius: 5%;
+   
+    
+
+}
+
+.imagenmain{
+    grid-area: imagenmain;
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+    margin: auto;
+   
+    
+  
+}
+/* Fin de Main1 de Inicio*/
+
+/* Section1 de Inicio */
+.section1{
+    display: grid;
+    text-align: center;
+}
+
+.divsectioninicio{
+    grid-template-rows: 20px 1fr 1fr ;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h2sectioninicio"
+        "psectioninicio"
+        "imagen2"
+          ;
+   
+}
+
+@media only screen and (min-width: 768px){
+    .box-main{
+        display: grid;
+        text-align: center;
+        grid-template-rows:70px 1fr 30%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "h2 h2"
+            "imagenmain imagenmain"
+            "pmain pmain"
+           ;
+        
+        .pmain{
+            border-radius: 10%
+        }
+          
+    }
+   
+    .divsectioninicio{
+        
+        grid-template-rows: auto 1fr  1fr ;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+            "h2sectioninicio h2sectioninicio"
+            "psectioninicio psectioninicio " 
+            "imagen2  imagen2"
+              ;
+
+        .psectioninicio{
+            border-radius: 10%
+    }
+    }
+   
+}
+
+@media only screen and (min-width: 1280px){
+    .box-main{
+        display: grid;
+        text-align: center;            
+        grid-template-rows: 20% ;
+        grid-template-columns: auto auto 25% 25%;
+        grid-template-areas: 
+            ". h2 h2 ."
+            "pmain pmain imagenmain imagenmain";
+
+        .imagenmain{
+            border: solid 4px;
+            border-color:map-get(c.$colores,"fondo");
+
+        }
+        
+        .pmain{
+            text-align: center;
+            padding-top: 75px;
+        }
+          
+    }
+
+    .divsectioninicio{
+        display: grid;
+        text-align: center;            
+        grid-template-rows: 20%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+            ". h2sectioninicio h2sectioninicio ."
+            "imagen2 imagen2 psectioninicio  psectioninicio"
+              ;
+        
+        .psectioninicio{
+            text-align: center;
+            padding-top: 75px;
+        }
+              
+    }       
+}
+
+.h2sectioninicio{
+    grid-area: h2sectioninicio;
+    text-align: center;
+   
+}
+
+.psectioninicio{
+    grid-area: psectioninicio;
+    background-color:map-get(c.$colores,"fondo"); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    border-radius: 5%;
+    
+    
+}
+
+.imagen2{
+    
+    grid-area: imagen2;
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+    margin: auto;
+    
+    
+    
+}
+.Formulario{
+    background-color: map-get(c.$colores,"fondo")
+}
+
+
+.Texto_de_formulario{
+    font-weight: bold;
+    ;
+}
+
+/* Sobre Mi */
+
+
+.divmainsobremi1{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "h2mainsobremi1"
+        "textotrayectoria1"
+        "foto_certificado";
+    ;
+}
+
+.divmainsobremi2{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "h2mainsobremi2"
+        "textotrayectoria2"
+        "fotocurso"
+        "textotrayectoria3"
+    ;
+}
+
+@media only screen and (min-width: 768px){
+    .divmainsobremi1{
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-template-rows: auto 2fr ;
+        grid-template-areas:
+            "h2mainsobremi1 h2mainsobremi1"
+            "textotrayectoria1 foto_certificado"
+            
+        
+        ;
+    }
+    
+    .divmainsobremi2{
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "h2mainsobremi2 h2mainsobremi2"
+            "textotrayectoria2 textotrayectoria2"
+            "fotocurso fotocurso"
+            "textotrayectoria3 textotrayectoria3"
+           
+        ;
+    }
+
+
+}
+
+@media only screen and (min-width: 1280px){
+    .divmainsobremi1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: auto auto auto;
+      
+        grid-template-areas:
+            "h2mainsobremi1 h2mainsobremi1 h2mainsobremi1"
+            "textotrayectoria1 textotrayectoria1 foto_certificado"
+            "textotrayectoria1 textotrayectoria1 foto_certificado"
+        
+           
+        ;
+        .foto_certificado{
+            margin-left: 100px;
+            width: 700px; 
+           height: 500px;
+           border: solid map-get(c.$colores,"fondo" );
+        }
+
+        .textotrayectoria1{
+           margin-top: 10px;
+           padding-top: 100px;
+        }
+    }
+    
+    .divmainsobremi2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "h2mainsobremi2 h2mainsobremi2 h2mainsobremi2"
+            "fotocurso  textotrayectoria2 textotrayectoria2"
+            "textotrayectoria3 textotrayectoria3 textotrayectoria3"
+        ;
+        .textotrayectoria3{
+            padding: 10px;
+        }
+
+        .h2mainsobremi2{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            font-weight: 10px;
+        }
+
+    }
+
+
+}
+
+.main2{
+    display: grid;
+    text-align: center;
+   
+}
+
+.textotrayectoria1{
+    background-color:map-get(c.$colores,"fondo");
+    text-align: center;
+    grid-area: textotrayectoria1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    border-radius: 10%;
+
+    
+}
+
+.textotrayectoria2{
+       background-color:map-get(c.$colores,"fondo");
+    text-align: center;
+    grid-area: textotrayectoria2;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    border-radius: 10%;
+    padding: 100px;
+}
+
+.textotrayectoria3{
+    background-color:map-get(c.$colores,"fondo");
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    border-radius: 10%;
+}
+
+.fotocurso{
+ 
+    grid-area: fotocurso;
+    background-color:map-get(c.$colores,"hover2");  
+
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2"); 
+}
+
+.foto_certificado{
+   grid-area: foto_certificado;
+    width:auto;
+    height: auto;
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+    
+}
+
+.sectiondetrabajo{
+    
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.sectiondetrabajo img{
+    width: 230px;
+    height: 170px;
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+}
+
+.h2mainsobremi1{
+    grid-area: h2mainsobremi1;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+
+}
+
+.h2mainsobremi2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}   
+
+.h3sobremi{
+    text-align: center; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+
+
+.linkgaleria1{
+    display: flex;
+    justify-content: center;
+    color:map-get(c.$colores,"texto"); 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.linkgaleria1:hover{
+    color:map-get(c.$colores,"hover");
+    transform: scale(1.3);
+    transition: 0.5s; 
+}
+
+/* Fin de Sobre mi */
+
+/* Productos y Servicios */
+.Tablas{
+        background-color:map-get(c.$colores,"fondo");
+        border-style: solid;
+        border-color:map-get(c.$colores,"hover2");
+        border-radius: 5px;
+        padding: auto;
+        margin: auto;
+        display: grid;
+        grid-template-columns:1fr 1fr  ;
+        grid-template-rows:auto auto auto  ;
+        grid-template-areas: 
+        "h2serv h2product"
+        "tablaserv  tablaproduct"
+        "linkproductosgaleria  linkproductosgaleria"
+        
+        ;
+}
+
+.h2serv{
+    grid-area: h2serv;
+    
+    
+    ;
+}
+
+.h2product{
+    grid-area: h2product;
+    background-color:map-get(c.$colores,"fondo");
+}
+
+
+.tabla-de-servicios{
+    grid-area: tablaserv;
+    margin: auto auto auto auto;
+    
+  
+
+}
+
+.tabla-de-productos{
+    grid-area: tablaproduct;
+    margin: auto auto auto auto;
+}
+
+
+
+.linkproductosagaleria{
+    display: flex;
+    grid-area: linkproductosgaleria;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 10px;
+    color:map-get(c.$colores,"texto"); 
+    margin: auto auto auto auto;
+   
+}
+
+.linkproductosagaleria:hover{
+    color:map-get(c.$colores,"hover");
+    transform: scale(0.9);
+    transition: 1.5s;
+}
+.imagenesproductos{
+    border-style: solid;
+    border-color:map-get(c.$colores,"hover2");
+}
+
+.imagenesproductos:hover{
+    
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+.Formulario{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #33272a; 
+    
+
+}
+/* Fin de Productos y Servicios */
+
+/* Promos */
+
+.Promosflex{
+    display:column;
+    margin: auto auto auto auto;
+   
+    
+}
+
+@media only screen and (min-width:768px){
+    .Promosflex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (min-width:1280px){
+    .Promosflex{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+}
+/* Animaciones */
+.Rebota{
+    animation: Rebota 2s infinite;
+}
+.Colores{
+    animation: Colores 2s infinite;
+}
+.h2promoanimado{
+    display: flex;
+    margin: auto auto auto auto;
+}
+.fotoanimada:hover{
+    animation: Colores 1s infinite;
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+
+.linkanimado{
+    animation: saltarin 2s infinite;
+}
+
+@keyframes saltarin{
+    0%{top: 0px;}
+    50%{top: 5px;}
+    100%{top: 0px;}
+}
+
+@keyframes Colores{
+    0%{ left: 0px ; background-color: #ff8ba7;}
+    50%{left: 10px ; background-color:#c3f0ca;}
+    100%{left: 0px ;background-color: #ff8ba7;}
+}
+

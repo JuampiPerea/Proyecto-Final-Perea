@@ -1,0 +1,30 @@
+@use "_commons" as c;
+
+
+footer{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';
+      font-weight: bold;
+   
+}
+
+footer ul li p{
+    color:map-get(c.$colores,"texto");
+}
+
+footer ul li a{
+    color:map-get(c.$colores,"texto");
+    
+   
+}
+
+footer ul li a:hover{
+    color:map-get(c.$colores,"hover");
+  
+}
+
+footer ul li{
+    display: flex;
+    justify-content:space-evenly;
+    list-style: none;
+   
+}
